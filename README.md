@@ -41,8 +41,8 @@ python3 generate_answer_key.py
 ```
 
 O programa solicitará:
-1. **Arquivo LaTeX de entrada** (padrão: `P1A.tex`)
-2. **Arquivo CSV de saída** (padrão: `P1A.csv`)
+1. **Arquivo LaTeX de entrada** (padrão: `P1A.tex`).
+2. **Arquivo CSV de saída** (padrão: `P1A.csv`).
 
 Pressione `Enter` para usar os valores padrão ou digite caminhos personalizados. O arquivo P1A.tex pode ser gerado conforme código disponível em https://github.com/wyllianbs/carderno_prova.
 
