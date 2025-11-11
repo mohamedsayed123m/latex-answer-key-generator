@@ -179,7 +179,7 @@ O arquivo de saída CSV poderá ser usado em um sistema OMR (_Optical Mark Reade
 
 ## 🎨 Exemplo Completo
 
-Veja o arquivo [`P1A.tex`](P1A.tex) incluído no repositório para um exemplo completo de prova LaTeX compatível com o gerador.
+Veja o arquivo [`P1A.tex`](P1A.tex) (https://github.com/wyllianbs/carderno_prova) incluído no repositório para um exemplo completo de prova LaTeX compatível com o gerador.
 
 ### Estrutura do P1A.tex
 
