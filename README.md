@@ -175,7 +175,7 @@ em que:
 - **Primeira coluna**: Identificador da questão (`q1`, `q2`, ...).
 - **Segunda coluna**: Resposta (`A`-`E` para múltipla escolha, `V`/`F` para verdadeiro/falso).
 
-O arquivo de saída CSV poderá ser usado em um sistema OMR (_Optical Mark Recognition_), _e.g._, https://github.com/Udayraj123/OMRChecker/.
+O arquivo de saída CSV pode ser usado como _input_ em um sistema OMR (_Optical Mark Recognition_), _e.g._, https://github.com/Udayraj123/OMRChecker/.
 
 ## 🎨 Exemplo Completo
 
