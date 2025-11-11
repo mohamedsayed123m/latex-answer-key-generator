@@ -1,6 +1,6 @@
 # 📝 Gerador de Gabarito LaTeX para CSV
 
-Código para extração de gabaritos de provas escritas em LaTeX e exportá-los em formato CSV para ser usado como input em sistema OMR (_e.g._, https://github.com/Udayraj123/OMRChecker/). Desenvolvido com **Orientação a Objetos** e **Type Hints** completos.
+Código para extração de gabaritos de provas escritas em LaTeX e exportá-los em formato CSV para ser usado como input em sistema OMR (_Optical Mark Reader_), _e.g._, https://github.com/Udayraj123/OMRChecker/. Desenvolvido com **Orientação a Objetos** e **Type Hints** completos.
 
 ## 🎯 Funcionalidades
 
