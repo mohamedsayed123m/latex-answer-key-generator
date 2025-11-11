@@ -1,0 +1,378 @@
+\documentclass[a4paper]{article}
+
+% ============================================
+% CONFIGURAÇÕES
+% ============================================
+\newcommand{\gabarito}          {0}     % 0: prova; 1: gabarito
+\newcommand{\numero}            {1}     % número da prova
+\newcommand{\pt}                {1,00}  % pontuação de cada questão
+\newcommand{\pontostotal}       {10}    % pontuação total da prova
+%%--------------------------------------------
+\newcommand{\autor}             {Prof. Wyllian Bezerra da Silva}
+\newcommand{\professor}         {Wyllian Bezerra da Silva}
+\newcommand{\sigla}             {UFSC}
+\newcommand{\uf}                {Universidade Federal de Santa Catarina}
+\newcommand{\universidade}      {\uf -- \sigla}
+\newcommand{\campus}            {\textit{Campus} Florianópolis}
+\newcommand{\departamento}      {Departamento de Informática e Estatística (INE)}
+\newcommand{\centro}            {Centro Tecnológico (CTC)}
+\newcommand{\disciplina}        {Programação Para Web}
+\newcommand{\codigo}            {INE5646}
+%%--------------------------------------------
+\newcommand{\ano}               {\the\year}
+\newcommand{\titulo}            {\disciplina}
+\newcommand{\assunto}           {Prova \numero}
+\newcommand{\valor}             {\pontostotal~pontos}
+\newcommand{\ponto}[1]          {\textbf{[#1]}~}
+\newcommand{\logoUFSCv}         {./figs/brasao_UFSC_vertical_sigla.pdf}
+%%--------------------------------------------
+
+
+
+% ============================================
+% PACOTES
+% ============================================
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage[T1]{fontenc} 
+\usepackage[utf8]{inputenc}
+\usepackage[english,brazil]{babel} 
+\usepackage{graphicx} 
+\usepackage[portuges]{datetime}
+\usepackage{multicol}
+\usepackage{adjmulticol}
+\usepackage[procnames]{listings}
+\usepackage{fancyvrb}
+\usepackage{mathtools}
+\usepackage{setspace}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref} % hifeniza URLs longas
+\usepackage{hyphenat}
+\usepackage[framemethod=tikz]{mdframed}
+\usepackage{enumitem,cleveref} % http://ctan.org/pkg/{enumitem,cleveref}
+\usepackage[lastpage,user]{zref}
+\usepackage{lineno} % \linenumbers
+\usepackage{cool}
+\usepackage{lmodern,amsmath,amsfonts,amssymb,mathptmx}
+\usepackage{stackrel}
+\usepackage{ragged2e} % para justificar o texto: \justifying
+
+\usepackage{lipsum} 
+
+% \usepackage{fontawesome5}
+
+% \usepackage[export]{adjustbox} % \includegraphics[scale=0.3,center]{figure.ext} 
+% \usepackage{tabularx}
+% \usepackage{tikz}
+% \usepackage{url}
+
+
+% ============================================
+% DEFINIÇÕES
+% ============================================
+\input{./definitions.tex}
+
+
+
+
+
+
+
+% ============================================
+% DOCUMENTO
+% ============================================
+\begin{document}\fontsize{9pt}{9pt}\selectfont
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                    Prova                 %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerP
+
+
+
+\begin{adjmulticols}{2}{0pt}{0pt}\raggedcolumns
+  
+  
+\begin{enumerate}[resume=*questions,label={\arabic*.},leftmargin=*]
+  \setcounter{rtaskno}{0} % reinicia o contador de questões
+        
+   
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%                   1 
+  % 
+  \needspace{13\baselineskip} % 6 linhas ocupadas pela questão, evita que a questão quebra na próxima coluna ou próxima página
+  \item \rtask \ponto{\pt} \lipsum[1][1-1]
+  
+\begin{lstlisting}[style=Python]
+# Python 3
+def ackermann(m, n):
+    if m == 0:
+        return n + 1
+    elif m > 0 and n == 0:
+        return ackermann(m - 1, 1)
+    elif m > 0 and n > 0:
+        return ackermann(m - 1, ackermann(m, n - 1))
+
+print(ackermann(3, 4))
+\end{lstlisting}
+  
+  % V
+  {\setlength{\columnsep}{0pt}\renewcommand{\columnseprule}{0pt}
+  \begin{multicols}{2}
+    \begin{answerlist}[label={\texttt{\Alph*}.},leftmargin=*]
+      \ifnum\gabarito=1\doneitem[V.]\else\ti[V.]\fi % gabarito
+      \ti[F.]
+    \end{answerlist}
+  \end{multicols}
+  }
+
+
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%                   2
+  % 
+  \needspace{8\baselineskip}
+  \item \rtask \ponto{\pt} \lipsum[1][1-1] JavaScript code:
+  
+    \begin{answerlist}[label={\texttt{\Alph*}.},leftmargin=*]
+      \ti \lstinline[style=JavaScript]|alert("Bem-vindo à página!");|.
+      \ti \lstinline[style=JavaScript]|document.getElementById("meuElemento").innerHTML = "Conteúdo alterado!";|.
+      
+      \di \lstinline[style=JavaScript]|console.log("Isso é uma mensagem no console!");|. % gabarito
+      
+      \ti \lstinline[style=JavaScript]|document.body.style.backgroundColor = "lightblue";|.
+      \ti \lstinline[style=JavaScript]|window.location.href = "https://www.exemplo.com";|.
+    \end{answerlist}
+
+
+
+
+
+
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%                   3
+  % 
+  \needspace{7\baselineskip}
+  \item \rtask \ponto{\pt} \lipsum[1][1-1] Python 3 code:
+  
+    \begin{answerlist}[label={\texttt{\Alph*}.},leftmargin=*]
+      \ti \lstinline[style=Python]|print("Olá, Mundo!")|.
+      \ti \lstinline[style=Python]|print(5 + 3)|.
+      
+      \di \lstinline[style=Python]|lista = [1, 2, 3, 4, 5]; print(lista)|. % gabarito
+      
+      \ti \lstinline[style=Python]|print("Par" if 4 % 2 == 0 else "Ímpar")|.
+      \ti \lstinline[style=Python]|print(max(10, 20))|.
+    \end{answerlist}
+
+
+    
+    
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%                   4
+  % 
+  \needspace{6\baselineskip}
+  \item \rtask \ponto{\pt} \lipsum[1][1-1]
+  
+    \begin{answerlist}[label={\texttt{\Alph*}.},leftmargin=*]
+      \ti \lipsum[1][1]
+      \ti \lipsum[1][1]
+      \ti \lipsum[1][1]
+      \ti \lipsum[1][1]
+      
+      \di \lipsum[1][1]
+    \end{answerlist}
+
+
+    
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%                   5
+  % 
+  \needspace{9\baselineskip}
+  \item \rtask \ponto{\pt} \lipsum[1][1-1]
+  
+    \begin{answerlist}[label={\texttt{\Alph*}.},leftmargin=*]
+      \di \lipsum[1][1]
+    
+      \ti \lipsum[1][1]
+      \ti \lipsum[1][1]
+      \ti \lipsum[1][1]
+      \ti \lipsum[1][1]
+    \end{answerlist}
+    
+    
+    
+    
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%                   6
+  % 
+  \needspace{6\baselineskip}
+  \item \rtask \ponto{\pt} \lipsum[1][1-1]
+  
+\begin{lstlisting}[style=CSS]
+// CSS 
+body {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+h1 {
+  font-size: 24px;
+  color: blue;
+}
+\end{lstlisting}
+  
+  % F
+  {\setlength{\columnsep}{0pt}\renewcommand{\columnseprule}{0pt}
+  \begin{multicols}{2}
+    \begin{answerlist}[label={\texttt{\Alph*}.},leftmargin=*]
+      \ti[V.]
+      \ifnum\gabarito=1\doneitem[F.]\else\ti[F.]\fi
+    \end{answerlist}
+  \end{multicols}
+  }
+    
+    
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%                   7
+  % 
+  \needspace{16\baselineskip}
+  \item \rtask \ponto{\pt} \lipsum[1][1-1] CSS code:
+  
+    \begin{answerlist}[label={\texttt{\Alph*}.},leftmargin=*]
+      \ti \lstinline[style=CSS]|body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; } h1 { color: #333; text-align: center; }|.
+      
+      \di \lstinline[style=CSS]|button { background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer; border-radius: 5px; }|.
+      
+      \ti \lstinline[style=CSS]|a { color: #007BFF; text-decoration: none; } a:hover { color: #0056b3; }|.
+      \ti \lstinline[style=CSS]|.center-text { text-align: center; margin: 20px; }|.
+      \ti \lstinline[style=CSS]|footer { background-color: #333; color: white; text-align: center; padding: 10px; position: fixed; width: 100%; bottom: 0; }|.
+    \end{answerlist}
+
+
+    
+    
+    
+    
+    
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%                   8
+  % 
+  \needspace{14\baselineskip}
+  \item \rtask \ponto{\pt} \lipsum[1][1-1] HTML code:
+  
+\begin{lstlisting}[style=HTML]
+<!-- HTML -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exemplo</title>
+</head>
+<body>
+  <h1>Olá, Mundo!</h1>
+  <p>Exemplo de código HTML.</p>
+</body>
+</html>
+\end{lstlisting}
+  
+  % F
+  {\setlength{\columnsep}{0pt}\renewcommand{\columnseprule}{0pt}
+  \begin{multicols}{2}
+    \begin{answerlist}[label={\texttt{\Alph*}.},leftmargin=*]
+      \ti[V.]
+      \ifnum\gabarito=1\doneitem[F.]\else\ti[F.]\fi
+    \end{answerlist}
+  \end{multicols}
+  }
+
+
+    
+    
+    
+    
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%                   9
+  % 
+  \needspace{6\baselineskip}\item \rtask \ponto{\pt} \lipsum[1][1-1]
+  
+    \begin{answerlist}[label={\texttt{\Alph*}.},leftmargin=*]
+      \ti \lipsum[1][1-1]
+      
+      \di \lipsum[1][1-1]
+      
+      \ti \lipsum[1][1-1]
+      \ti \lipsum[1][1-1]
+      \ti \lipsum[1][1-1]
+    \end{answerlist}
+    
+    
+    
+    
+    
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%                   10
+  % 
+  \needspace{14\baselineskip}
+  \item \rtask \ponto{\pt} \lipsum[1][1-1]
+  
+\begin{lstlisting}[style=JavaScript]
+// JavaScript
+function ackermann(m, n) {
+    if (m === 0) {
+        return n + 1;
+    } else if (m > 0 && n === 0) {
+        return ackermann(m - 1, 1);
+    } else if (m > 0 && n > 0) {
+        return ackermann(m - 1, ackermann(m, n - 1));
+    }
+}
+
+console.log(ackermann(3, 4));
+\end{lstlisting}
+  
+  % F
+  {\setlength{\columnsep}{0pt}\renewcommand{\columnseprule}{0pt}
+  \begin{multicols}{2}
+    \begin{answerlist}[label={\texttt{\Alph*}.},leftmargin=*]
+      \ti[V.]
+      \ifnum\gabarito=1\doneitem[F.]\else\ti[F.]\fi
+    \end{answerlist}
+  \end{multicols}
+  }
+        
+
+\end{enumerate}
+   
+   
+{\setlength\linenumbersep{-3pt}
+  \begin{linenumbers}[1]
+    \raggedleft
+    \onehalfspacing
+    \nlunder{8}{gray}[.98]
+  \end{linenumbers}
+}
+
+
+
+
+\end{adjmulticols}
+
+
+
+
+
+
+
+
+% ============================================
+% Output
+% ============================================
+\ifnum\gabarito=1
+  \immediate\write18{mv \jobname.pdf \jobname _gabarito.pdf}
+\fi
+
+\end{document}
