@@ -28,7 +28,7 @@ git clone https://github.com/seu-usuario/latex-answer-key-generator.git
 # Acesse o diretório
 cd latex-answer-key-generator
 
-# Execute o script
+# Execute o código
 python3 generate_answer_key.py
 ```
 
@@ -75,7 +75,7 @@ Preview das primeiras 10 respostas:
 
 ### Questões de Múltipla Escolha
 
-O script identifica questões de múltipla escolha através dos comandos `\ti` e `\di`:
+O código identifica questões de múltipla escolha através dos comandos `\ti` e `\di`:
 
 ```latex
 \item \rtask \ponto{\pt} Qual é a capital do Estado do Paraná?
@@ -93,7 +93,7 @@ O script identifica questões de múltipla escolha através dos comandos `\ti` e
 
 ### Questões Verdadeiro/Falso
 
-O script identifica questões V/F através do comando `\doneitem`:
+O código identifica questões V/F através do comando `\doneitem`:
 
 ```latex
 \item \rtask \ponto{\pt} Python é uma linguagem de programação.
