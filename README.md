@@ -102,7 +102,7 @@ O script identifica questões V/F através do comando `\doneitem`:
 {\setlength{\columnsep}{0pt}\renewcommand{\columnseprule}{0pt}
 \begin{multicols}{2}
   \begin{answerlist}[label={\texttt{\Alph*}.},leftmargin=*]
-    \ifnum\gabarito=1\doneitem[V.]\else\ti[V.]\fi % gabarito
+    \ifnum\gabarito=1\doneitem[V.]\else\ti[V.]\fi % Resposta correta (V)
     \ti[F.]
   \end{answerlist}
 \end{multicols}
@@ -172,8 +172,10 @@ q6,B
 ```
 
 em que:
-- **Primeira coluna**: Identificador da questão (`q1`, `q2`, ...)
-- **Segunda coluna**: Resposta (`A`-`E` para múltipla escolha, `V`/`F` para verdadeiro/falso)
+- **Primeira coluna**: Identificador da questão (`q1`, `q2`, ...).
+- **Segunda coluna**: Resposta (`A`-`E` para múltipla escolha, `V`/`F` para verdadeiro/falso).
+
+O arquivo de saída CSV poderá ser usado em um sistema OMR (_Optical Mark Reader_), _e.g._, https://github.com/Udayraj123/OMRChecker/.
 
 ## 🎨 Exemplo Completo
 
